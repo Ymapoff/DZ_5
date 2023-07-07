@@ -1,5 +1,3 @@
-package ru.netology.patterns.carddelivery.data;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -11,6 +9,7 @@ import com.github.javafaker.Faker;
 public class DataGenerator {
     private DataGenerator() {
     }
+
     static Faker faker = new Faker(new Locale("ru"));
 
     public static String generateDate(int addDays, String pattern) {
@@ -27,7 +26,7 @@ public class DataGenerator {
 
     public static String generateCity() {
         var cities = new String[]{
-                "Санкт-Петербург", "Омск", "Ульяновск", "Псков", "Йошкар-Ола", "Великий Новгород"
+                "Омск", "Псков", "Великий Новгород", "Санкт-Петербург", "Йошкар-Ола", "Ульяновск"
         };
         return cities[new Random().nextInt(cities.length)];
     }
