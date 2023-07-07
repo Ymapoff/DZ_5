@@ -9,6 +9,7 @@ import com.github.javafaker.Faker;
 public class DataGenerator {
     private DataGenerator() {
     }
+
     static Faker faker = new Faker(new Locale("ru"));
 
     public static String generateDate(int addDays, String pattern) {
