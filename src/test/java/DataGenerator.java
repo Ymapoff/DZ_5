@@ -9,7 +9,6 @@ import com.github.javafaker.Faker;
 public class DataGenerator {
     private DataGenerator() {
     }
-
     static Faker faker = new Faker(new Locale("ru"));
 
     public static String generateDate(int addDays, String pattern) {
@@ -26,7 +25,7 @@ public class DataGenerator {
 
     public static String generateCity() {
         var cities = new String[]{
-                "Омск", "Псков", "Великий Новгород", "Санкт-Петербург", "Йошкар-Ола", "Ульяновск"
+                "Санкт-Петербург", "Омск", "Ульяновск", "Псков", "Йошкар-Ола", "Великий Новгород"
         };
         return cities[new Random().nextInt(cities.length)];
     }
