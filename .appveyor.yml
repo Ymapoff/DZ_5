@@ -9,9 +9,9 @@ branches:
 build: off
 
 install:
-  - java -jar ./artifacts/app-card-delivery &
+  - java -jar ./artifacts/app-card-delivery.jar -P:profile=test &
 
 
 build_script:
   - chmod +x gradlew
-  - ./gradlew test -Selenide.headless=true --info
+  - ./gradlew test --info -Dselenide.headless=true
